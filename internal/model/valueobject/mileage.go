@@ -1,6 +1,8 @@
-package valueobject
+package vo
 
-import errs "dddcarpark/internal/errors"
+import (
+	errs "dddcarpark/internal/errors"
+)
 
 type Mileage struct {
 	distance uint32

@@ -16,4 +16,6 @@ var (
 	ErrInvalidYear                = errors.New("некорректный год выпуска")
 	ErrInvalidComponentType       = errors.New("некорректный тип детали")
 	ErrInvalidMonthResource       = errors.New("некорректный срок службы (в месяцах)")
+	ErrInvalidCurrency            = errors.New("некорркетная валюта")
+	ErrInvalidDescriptionLength   = errors.New("некорректная длина описания")
 )

@@ -6,12 +6,13 @@ import (
 )
 
 type Vehicle struct {
-	Vin     vo.VinNumber
-	Make    string
-	Model   string
-	Mileage vo.Mileage
-	Year    vo.Year
-	Status  vo.Status
+	Vin        vo.VinNumber
+	Make       string
+	Model      string
+	Mileage    vo.Mileage
+	Year       vo.Year
+	Status     vo.StatusVehicle
+	Components map[vo.ComponentType]*InstalledComponent
 }
 
 func NewCreate(

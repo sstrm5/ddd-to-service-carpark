@@ -1,4 +1,4 @@
-package valueobject
+package vo
 
 type Resource struct {
 	distance Measure
