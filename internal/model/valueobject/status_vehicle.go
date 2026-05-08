@@ -5,9 +5,9 @@ import errs "dddcarpark/internal/errors"
 type StatusVehicle string
 
 const (
-	Active      StatusVehicle = "active"
-	UnderRepair StatusVehicle = "under repair"
-	WrittenOff  StatusVehicle = "written off"
+	Active      StatusVehicle = "active"       // машина готова к приему сервисом
+	UnderRepair StatusVehicle = "under repair" // машина в сервисе
+	WrittenOff  StatusVehicle = "written off"  // машина списана (больше не может проходить ТО)
 )
 
 func NewStatusVehicle(value string) (StatusVehicle, error) {
