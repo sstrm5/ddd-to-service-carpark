@@ -47,7 +47,8 @@ func TestNewMeasure_Invalid(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			// щас допишу
+			_, err := vo.NewMeasure(tt.value)
+			require.Error(t, err)
 		})
 	}
 }

@@ -5,8 +5,8 @@ import (
 )
 
 type Mileage struct {
-	distance uint32
-	measure  Measure
+	Distance uint32
+	Measure  Measure
 }
 
 const MilesToKmCoeff float32 = 1.61
@@ -16,19 +16,19 @@ func NewMileage(distance uint32, measure Measure) (Mileage, error) {
 		return Mileage{}, errs.ErrInvalidDistance
 	}
 	return Mileage{
-		distance: distance,
-		measure:  measure,
+		Distance: distance,
+		Measure:  measure,
 	}, nil
 }
 
 func (m *Mileage) LessThan(other Mileage) bool {
-	if m.measure != other.measure {
-		if m.measure == Miles {
-			return float32(m.distance)*MilesToKmCoeff < float32(other.distance)
+	if m.Measure != other.Measure {
+		if m.Measure == Miles {
+			return float32(m.Distance)*MilesToKmCoeff < float32(other.Distance)
 		}
-		if other.measure == Miles {
-			return float32(m.distance) < float32(other.distance)*MilesToKmCoeff
+		if other.Measure == Miles {
+			return float32(m.Distance) < float32(other.Distance)*MilesToKmCoeff
 		}
 	}
-	return m.distance < other.distance
+	return m.Distance < other.Distance
 }
